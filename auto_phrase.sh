@@ -49,7 +49,6 @@ cd originalAutoPhrase
 echo "Raw Train: ${RAW_TRAIN}"
 echo "Model Dir: ${MODELS_DIR}"
 echo "Data Dir: ${DATA_DIR}"
-echo "Tokenizer: ${Tokenizer}"
 echo "Working dir: $PWD"
 ### End: Suggested Parameters ###
 

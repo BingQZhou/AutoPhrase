@@ -814,6 +814,7 @@ public class Tokenizer {
         String tokenizedRawFileName = "";
         String tokenizedIDFileName = "";
         threads = Runtime.getRuntime().availableProcessors();
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
         for (int i = 0; i + 1 < args.length; ++ i) {
             switch (args[i]) {
                 case "-m": {mode = args[i + 1]; break;}
