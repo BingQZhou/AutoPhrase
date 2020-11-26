@@ -10,9 +10,9 @@
 # and "BAD_POS_TAGS.txt" will have been renamed to "default_data".
 while getopts 't:m:d:' flag; do
   case "${flag}" in
-    a) RAW_TRAIN="${OPTARG}" ;;
-    b) MODELS_DIR="${OPTARG}" ;;
-    f) DATA_DIR="${OPTARG}" ;;
+    t) RAW_TRAIN="${OPTARG}" ;;
+    m) MODELS_DIR="${OPTARG}" ;;
+    d) DATA_DIR="${OPTARG}" ;;
   esac
 done
 if [ -d "default_data" ]; then
