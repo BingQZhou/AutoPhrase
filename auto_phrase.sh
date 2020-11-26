@@ -8,6 +8,13 @@
 # However, when this script is run from a Docker container, it's perfectly fine for the user to mount an external
 # directory called "data" and read the corpus from there, since the directory holding the language-specific files
 # and "BAD_POS_TAGS.txt" will have been renamed to "default_data".
+while getopts 't:m:d:' flag; do
+  case "${flag}" in
+    a) RAW_TRAIN="${OPTARG}" ;;
+    b) MODELS_DIR="${OPTARG}" ;;
+    f) DATA_DIR="${OPTARG}" ;;
+  esac
+done
 if [ -d "default_data" ]; then
     DATA_DIR=${DATA_DIR:- default_data}
 else
@@ -38,6 +45,9 @@ COMPILE=${COMPILE:- 1}
 MAX_POSITIVES=-1
 LABEL_METHOD=DPDN
 RAW_LABEL_FILE=${RAW_LABEL_FILE:-""}
+echo "Raw Train: ${RAW_TRAIN}"
+echo "Model Dir: ${MODELS_DIR}"
+echo "Data Dir: ${DATA_DIR}"
 ### End: Suggested Parameters ###
 
 green=`tput setaf 2`
