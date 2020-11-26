@@ -48,6 +48,7 @@ RAW_LABEL_FILE=${RAW_LABEL_FILE:-""}
 echo "Raw Train: ${RAW_TRAIN}"
 echo "Model Dir: ${MODELS_DIR}"
 echo "Data Dir: ${DATA_DIR}"
+echo "Working dir: $PWD"
 ### End: Suggested Parameters ###
 
 green=`tput setaf 2`
@@ -55,7 +56,7 @@ reset=`tput sgr0`
 
 if [ $COMPILE -eq 1 ]; then
     echo ${green}===Compilation===${reset}
-    bash compile.sh
+    bash originalAutoPhrase/compile.sh
 fi
 
 mkdir -p tmp
