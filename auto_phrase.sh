@@ -45,6 +45,7 @@ COMPILE=${COMPILE:- 1}
 MAX_POSITIVES=-1
 LABEL_METHOD=DPDN
 RAW_LABEL_FILE=${RAW_LABEL_FILE:-""}
+cd originalAutoPhrase
 echo "Raw Train: ${RAW_TRAIN}"
 echo "Model Dir: ${MODELS_DIR}"
 echo "Data Dir: ${DATA_DIR}"
@@ -56,7 +57,7 @@ reset=`tput sgr0`
 
 if [ $COMPILE -eq 1 ]; then
     echo ${green}===Compilation===${reset}
-    bash originalAutoPhrase/compile.sh
+    bash compile.sh
 fi
 
 mkdir -p tmp
