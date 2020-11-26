@@ -1,8 +1,18 @@
+bin/
 data/corpus.txt
+data/EN/DBLP.txt
 models/MyModel/
+models/DBLP/AutoPhrase_multi-words.txt
+models/DBLP/AutoPhrase_single-word.txt
+models/DBLP/segmentation.txt
+tmp/
 Python/
 results/
 tmp/
+
+__pycache__
+.ipynb_checkpoints
+.DS_Store
 
 *.orig
 *.pyc
