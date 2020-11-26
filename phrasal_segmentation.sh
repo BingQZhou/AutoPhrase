@@ -1,6 +1,7 @@
 #!/bin/bash
 # As in "auto_phrase.sh", make the default model amd data directories depend on whether or not we're running
 # from a Docker container.
+cd originalAutoPhrase
 if [ -d "default_models" ]; then
     MODELS_DIR=${MODELS_DIR:- default_models}
 else
